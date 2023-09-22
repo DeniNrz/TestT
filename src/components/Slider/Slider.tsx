@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
-import Image from '../../img/IMG.JPG'
+import Image from '../img/IMG.JPG'
 
 import './Slider.css'
 
@@ -13,8 +13,11 @@ import 'swiper/css/thumbs'
 
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 
+// eslint-disable-next-line @typescript-eslint/no-redeclare
+type Swiper = any
+
 export const Slider: React.FC = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
+  const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>(null!)
   return (
     <>
 
@@ -36,7 +39,7 @@ export const Slider: React.FC = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper || ''}
+        onSwiper={setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
