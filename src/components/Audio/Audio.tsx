@@ -1,7 +1,7 @@
 import React from 'react'
 import VolumeUpOutlinedIcon from '@mui/icons-material/VolumeUpOutlined'
 
-import Audio from '../../img/audio.png'
+import Audio from '../img/audio.png'
 
 import './Audio.css'
 

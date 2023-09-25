@@ -19,12 +19,10 @@ type Swiper = any
 export const Slider: React.FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper>(null!)
   return (
-    <>
-
+    <div className='swiper-container'>
       <Swiper
         className="mySwiper"
         spaceBetween={10}
-       
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
       >
@@ -39,7 +37,7 @@ export const Slider: React.FC = () => {
         </SwiperSlide>
       </Swiper>
       <Swiper
-        onSwiper={setThumbsSwiper}
+        onSwiper={(swiper) => setThumbsSwiper(swiper)}
         spaceBetween={10}
         slidesPerView={4}
         freeMode={true}
@@ -57,6 +55,6 @@ export const Slider: React.FC = () => {
           <img src={Image} alt="img" />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   )
 }

@@ -1,3 +1,15 @@
+.blok {
+   margin-top: -350px;
+
+   @media (max-width: 1050px) {
+      margin-top: -200px;
+    }
+
+    @media (max-width: 850px) {
+      margin-top: 0px;
+    }
+}
+
 .bloks {
   display: flex;
   justify-content: flex-start;

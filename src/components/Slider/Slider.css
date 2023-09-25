@@ -26,6 +26,7 @@
   height: 300px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .swiper-slide {
@@ -36,15 +37,14 @@
 .mySwiper2 {
   height: 80%;
   width: 100%;
-
-  
+  /* position: absolute; */
 }
 
 .mySwiper {
   height: 50%;
   box-sizing: border-box;
   padding: 10px 0;
-
+  position: relative;
 }
 
 .mySwiper .swiper-slide {
@@ -63,42 +63,40 @@
   object-fit: cover;
 }
 
+.swiper-container {
+  position: relative;
+  width: 400px;
+  height: 800px;
+
+  @media (max-width: 850px) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 850px) {
+    width: 350px;
+  }
+
+  @media (max-width: 350px) {
+   width: 300px;
+ }
+}
+
 .mySwiper2 {
   position: absolute;
   width: 400px;
   height: 100px;
-  top: 55%;
-  left: 16%;
-
-  @media (max-width: 1280px) {
-    left: 12%;
-  }
-
-  @media (max-width: 1280px) {
-    left: 8%;
-  }
-
-  @media (max-width: 1120px) {
-    top: 81%;
-  }
-
-  @media (max-width: 1080px) {
-    left: 6%;
-    top: 75%;
-  }
-
-  @media (max-width: 1045px) {
-    left: 13%;
-    top: 110%;
-  }
-  @media (max-width: 850px) {
-    left: 22%;
-    top: 140%;
-    width: 600px;
-    height: 150px;
-  }
+  bottom: 450px;
+  margin-left: 12%;
 
   @media (max-width: 850px) {
-   top: 120%;
+    width: 300px;
+    height: 80px;
+    margin: 0;
+    padding-left: 18%;
   }
+
+  @media (max-width: 350px) {
+   width: 250px;
+   height: 60px;
+ }
 }
